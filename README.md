@@ -4,7 +4,7 @@
 
 [hifive - HTML5企業Webシステムのための開発プラットフォーム - hifive](http://www.htmlhifive.com/)
 
-このハンズオンではhifiveとDeviceConnectの使い方が習得できます。
+このハンズオンではhifiveと[DeviceConnect](https://github.com/DeviceConnect)の使い方が習得できます。
 
 ## 前提条件
 
