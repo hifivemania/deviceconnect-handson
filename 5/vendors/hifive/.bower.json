@@ -1,0 +1,15 @@
+{
+  "name": "hifive",
+  "homepage": "https://github.com/hifivemania/hifive-bower",
+  "version": "1.3.1",
+  "_release": "1.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.3.1",
+    "commit": "89d36f9b14995ea6a3725929dd210bf1d0b1c313"
+  },
+  "_source": "https://github.com/hifivemania/hifive-bower.git",
+  "_target": "^1.3.1",
+  "_originalSource": "hifive",
+  "_direct": true
+}

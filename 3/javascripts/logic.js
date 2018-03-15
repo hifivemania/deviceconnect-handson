@@ -8,6 +8,7 @@ $(function() {
     // 3. データを取得して返却
     getLocalData: function(path) {
       var dfd = this.deferred();
+      // Ajax処理
       h5.ajax(path, {
         type: 'GET'
       })
@@ -33,7 +34,7 @@ $(function() {
     '#button click': function() {
       this.getData(
         // ロジックを呼び出します
-        this.ajaxLogic.getLocalData('/content.txt')
+        this.ajaxLogic.getLocalData('/3/content.txt')
       );
     },
     
@@ -43,7 +44,7 @@ $(function() {
         // Promiseオブジェクトの場合
         // 処理完了を自分を再帰呼び出し
         response.done(this.own(function(response) {
-            this.getData(response);
+          this.getData(response);
         }));
       } else {
         // 結果を書き込み
