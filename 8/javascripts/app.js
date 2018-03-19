@@ -133,15 +133,16 @@ $(function() {
     // ライトのオン、オフ
     light: function(status) {
       var dfd = this.deferred();
-      var service = this.findService("hue");
+      var service = this.findService("hue"); // 1. サービスを host から hue に変更
       var builder = new dConnect.URIBuilder();
       builder.setProfile("light");
       builder.setServiceId(service);
       builder.setAccessToken(this.__accessToken);
 
-      // 光らせたい電球のidに変更する
-      var lightId = '1';
+      // 2. lightId を指定
+      var lightId = '1'; // 光らせたい電球のidに変更する
       builder.addParameter("lightId", lightId);
+
       var uri = builder.build();
       var method = status ? 'post' : 'delete';
       dConnect[method](uri, null, null, function(json) {
