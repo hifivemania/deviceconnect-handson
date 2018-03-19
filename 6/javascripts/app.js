@@ -1,4 +1,4 @@
-$(() => {
+$(function() {
   var dcLogic = {
     __name: 'DCLogic',
     __services: [],
@@ -44,7 +44,7 @@ $(() => {
           dfd.resolve({apiVersion: apiVersion});
         },
         // 接続失敗
-        function (errorCode, errorMessage) {
+        function(errorCode, errorMessage) {
           // エラーを送信します
           dfd.reject({
             errorCode: errorCode,
@@ -62,14 +62,14 @@ $(() => {
         options.scopes,
         options.applicationName,
         // 認可取得成功
-        function (clientId, accessToken) {
+        function(clientId, accessToken) {
           dfd.resolve({
             clientId: clientId,
             accessToken: accessToken
           });
         },
         // 認可取得失敗
-        function (errorCode, errorMessage) {
+        function(errorCode, errorMessage) {
           dfd.reject({
             errorCode: errorCode,
             errorMessage: errorMessage
@@ -85,11 +85,11 @@ $(() => {
       dConnect.discoverDevices(
         options.accessToken,
         // 一覧取得成功
-        function (json) {
+        function(json) {
           dfd.resolve(json.services);
         },
         // 一覧取得失敗
-        function (errorCode, errorMessage) {
+        function(errorCode, errorMessage) {
           dfd.reject({
             errorCode: errorCode,
             errorMessage: errorMessage
@@ -140,9 +140,9 @@ $(() => {
       builder.setAccessToken(this.__accessToken);
       var uri = builder.build();
       var method = status ? 'post' : 'delete';
-      dConnect[method](uri, null, null, function (json) {
+      dConnect[method](uri, null, null, function(json) {
         dfd.resolve("処理成功しました");
-      }, function (errorCode, errorMessage) {
+      }, function(errorCode, errorMessage) {
         dfd.reject({
           errorCode: errorCode,
           errorMessage: errorMessage
