@@ -180,7 +180,7 @@ $(() => {
     },
     
     // バイブレーション実行
-    '#vibrate click': function (e) {
+    '#vibrate click': function(e) {
       this.dcLogic.vibrate()
       // 処理成功
       .then(function(message) {

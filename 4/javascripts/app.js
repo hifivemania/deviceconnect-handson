@@ -164,7 +164,7 @@ $(() => {
     },
     
     // バイブレーション実行
-    '#vibrate click': function (e) {
+    '#vibrate click': function(e) {
     },
     
     // ライトをオンにする処理
