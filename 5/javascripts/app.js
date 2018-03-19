@@ -101,7 +101,7 @@ $(function() {
     
     // サービスを見つける処理
     findService: function(name) {
-      for (i in this.__services) {
+      for (var i in this.__services) {
         if (this.__services[i].id.toLowerCase().indexOf(name.toLowerCase()) == 0) {
           return this.__services[i].id;
         }
